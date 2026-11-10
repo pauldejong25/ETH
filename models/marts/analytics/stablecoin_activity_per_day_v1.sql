@@ -1,4 +1,5 @@
-{{ config(tags=['stablecoin'])}}
+-- + Add extra grants on TESTER
+{{ config(tags=['stablecoin'], grants = {'+select': ['TESTER']})}}
 select
 t.date,
 t.token_address,
