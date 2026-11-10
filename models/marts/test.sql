@@ -1,3 +1,3 @@
 {{ config(group = 'fraud_risk', access='private') }}
 select *
-from {{ ref('confirmed_frauds') }}
+from {{ ref('stg_token_transfer_aggs') }}
