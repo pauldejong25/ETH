@@ -7,7 +7,7 @@ on:
 
 jobs:
   dbt-run:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment: DBT_ETH
 
     env:
@@ -25,7 +25,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.12.10"
+          python-version: "3.12.0"
 
       - name: Install dbt
         run: |
