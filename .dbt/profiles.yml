@@ -1,0 +1,13 @@
+eth:
+  outputs:
+    ci:
+      account: VADVQSG-NS58239
+      database: CI
+      private_key_path: "{{ env_var('DBT_PRIVATE_KEY_PATH') }}"
+      role: ACCOUNTADMIN
+      schema: CI_PDJ
+      threads: 1
+      type: snowflake
+      user: PAULJ25
+      warehouse: LEARNING_WH
+  target: ci
