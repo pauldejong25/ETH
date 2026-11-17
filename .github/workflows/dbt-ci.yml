@@ -52,6 +52,7 @@ jobs:
           git checkout master
           dbt deps
           dbt parse --target prod
+          rm -r state
           mkdir -p state
           cp target/manifest.json state/manifest.json
           git checkout -
