@@ -50,11 +50,11 @@ jobs:
       - name: Create state manifest from master
         run: |
           git checkout master
-          rm -r state
+          rm -r state1
           dbt deps
           dbt parse --target prod
-          mkdir -p state
-          cp target/manifest.json state/manifest.json
+          mkdir -p state1
+          cp target/manifest.json state1/manifest.json
           git checkout -
 
       # ---- Clone incrementals first (so is_incremental() is true) ----
